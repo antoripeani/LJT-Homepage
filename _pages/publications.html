@@ -1,36 +1,11 @@
----
-layout: archive
-title: "Publications"
-permalink: /publications/
-author_profile: true
----
-
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
-
-{% include base_path %}
-
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
-
-
-
+<h2>Publications</h2>
+<h3>Journals</h3>
+<ol>
+<li><strong>LJT</strong>, et al. "Efficient Multimodal Fusion for Vision-Language Tasks", <em>IEEE Transactions on Pattern Analysis and Machine Intelligence</em>, 2024.</li>
+<li><strong>LJT</strong>, et al. "Low-Resource NLP: Advances and Challenges", <em>ACM Computing Surveys</em>, 2023.</li>
+</ol>
+<h3>Conferences</h3>
+<ol>
+<li><strong>LJT</strong>, et al. "Transformer-based Models for Small Datasets", <em>NeurIPS</em>, 2022.</li>
+<li><strong>LJT</strong>, et al. "Cross-lingual Transfer Learning for Low-Resource Languages", <em>ACL</em>, 2021.</li>
+</ol>
